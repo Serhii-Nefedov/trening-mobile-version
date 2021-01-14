@@ -2,12 +2,11 @@
   position: fixed;
   z-index: 5;
 
-  padding-left: 15px;
-  padding-right: 15px;
-  top: 0px;
-  left: 0px;
+ padding: 93px 15px;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 796px;
+  height: 609px;
 
   background: $backdrop-background;
 
@@ -26,6 +25,17 @@
 }
 
 .modal {
+  padding-top: 8px;
+ background-color: $backrgound-color; 
+  box-shadow: $box-shadow;
+
+  border-radius: 4px;
+
+
+  
+}
+
+/*{
   position: absolute;
   left: 50%;
   top: 50%;
@@ -41,12 +51,12 @@
 
   transform: translate(-50%, -50%) scale(1);
   @include transition(transform);
-}
+}*/
 
 .modal__close-button {
   @extend %display-flex-centre;
 
-  margin-top: 8px;
+//  margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
   padding: 0;
