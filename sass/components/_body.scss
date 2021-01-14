@@ -1,0 +1,14 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+
+  color: $title-color;
+  background-color: $backrgound-color;
+  
+
+  font-family: $main-font;
+  letter-spacing: $main-let-spac;
+
+  @extend %ul;
+  @extend %images;
+}

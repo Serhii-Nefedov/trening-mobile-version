@@ -1,0 +1,36 @@
+.activity {
+  padding-bottom: 94px;
+}
+.activity__list {
+  /*display: flex;
+  justify-content: space-between;*/
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  @extend %ul;
+}
+.activity__thumb {
+  position: relative;
+  z-index: 1;
+}
+
+.activity__subtitle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $title-button-white-color;
+  background-color: $activity-subtitle-background-color;
+}

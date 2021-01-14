@@ -1,0 +1,27 @@
+.logo {
+  display: block;
+  @extend %text-decor-none;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: $logo-font;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+
+  .logo__first-label {
+    color: $accent-color;
+  }
+  .logo__second-label {
+    color: $logo-black-color;
+  }
+
+  &.logo--inverce {
+    @extend %margin-padding-none;
+
+  }
+  .logo__second-label--inverce {
+    color: $logo-white-color;
+  }
+}
