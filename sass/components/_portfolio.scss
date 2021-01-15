@@ -1,4 +1,191 @@
+.portfolio-header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
 .site-nav__link--portfolio-active {
+ position: relative;
+  padding-bottom: 12px;
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+
+    width: 99px;
+    height: 4px;
+
+    background: $accent-color;
+
+    border-radius: 2px;
+  }
+}
+
+.projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+  padding: 0;
+  
+  @extend %ul;
+}
+
+.filters__item {
+  margin-right: 8px;
+  &:nth-child(4) {
+    margin-top: 15px;
+  }
+  &:last-child {
+    margin: 15px 0 0 0;
+  }
+}
+
+.filters__button {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+
+  color: $title-color;
+  background-color: $team-background-color;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $title-button-white-color;
+    background-color: $accent-color;
+
+    box-shadow: $filters-box-shadov;
+  }
+}
+
+/*Galery*/
+
+.galery {
+  
+  @extend %ul;
+  @extend %margin-padding-none;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.galery__card {
+  margin-bottom: 30px;
+  width: 100%;
+ 
+  
+
+  @include transition(box-shadow);
+  &:hover,
+  &:focus {
+    box-shadow: $galery-box-shadow;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.galery__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.galery__overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: $galery-overlay-color;
+
+  @include transition(transform);
+  transform: translateY(100%);
+}
+.galery__link {
+  display: block;
+  @extend %text-decor-none;
+  &:hover .galery__overley,
+  &:focus .galery__overley {
+    transform: translateY(0);
+  }
+}
+
+.galery__subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  color: $title-button-white-color;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.galery__card-content {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.galery__title-content {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $title-color;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.galery__type-content {
+  margin-top: 4px;
+  margin-bottom: 0;
+
+  color: $subtitle-color;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+}
+/*.site-nav__link--portfolio-active {
   position: relative;
   color: $accent-color;
 
@@ -20,11 +207,11 @@
 }
 .portfolio-header {
   border-bottom: 1px solid #ececec;
-}
+}*/
 
 /*projects*/
 
-.projects {
+/*.projects {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -71,11 +258,11 @@
 
     box-shadow: $filters-box-shadov;
   }
-}
+}*/
 
 /*Galery*/
 
-.galery {
+/*.galery {
   display: flex;
   flex-wrap: wrap;
   margin-top: 39px;
@@ -178,4 +365,4 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
-}
+}*/
