@@ -34,19 +34,18 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 25px;
   padding: 0;
   
   @extend %ul;
 }
 
 .filters__item {
+  margin-bottom: 15px;
   margin-right: 8px;
-  &:nth-child(4) {
-    margin-top: 15px;
-  }
   &:last-child {
-    margin: 15px 0 0 0;
+    margin: 0 0 15px 0;
   }
 }
 

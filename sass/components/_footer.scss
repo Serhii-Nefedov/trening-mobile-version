@@ -15,6 +15,27 @@ width: 1200px;*/
   
   padding-left: 15px;
   padding-right: 15px;
+
+@media screen and (min-width: 480px) {
+  width: 480px;
+}
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 1200px;
+  }
 }
 
 .footer__contacts-container {
@@ -25,6 +46,7 @@ width: 1200px;*/
   @extend %ul;
  padding: 0;
  margin-top: 20px;
+ margin-bottom: 0;
 }
 .footer__adress-link {
   display: block;
@@ -67,6 +89,14 @@ width: 1200px;*/
 
 .social-box {
   margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+   margin-top: 0; 
+   margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
 /* margin-left: 70px;
   min-width: 207px;*/ 
 }
@@ -130,15 +160,25 @@ width: 1200px;*/
 .footer-form {
   margin-top: 60px;
 /*  margin-left: 93px; */
+@media screen and (min-width: 1200px) {
+  margin-top: 0;
+}
 }
 
 .footer-form__form {
- /* display: flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /* justify-content: center;
   align-items: baseline;*/
 
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .footer-form__label {
@@ -159,6 +199,13 @@ width: 1200px;*/
 .footer-form__field {
     
   position: relative;
+  width: 100%;
+  @media screen and (min-width: 480px) {
+  width: 450px;
+}
+@media screen and (min-width: 1200px) {
+  width: 358px;
+}
 }
 .footer-form__input {
   width: 100%; 
@@ -186,12 +233,14 @@ width: 1200px;*/
 }
 
 .footer-form__btn {
-/*  @extend %display-flex-centre; */
+@extend %display-flex-centre; 
+
 
 margin-top: 20px; 
   padding: 0;
   width: 200px;
   height: 50px;
+
 
   font-weight: bold;
   font-size: 16px;
@@ -209,6 +258,11 @@ margin-top: 20px;
   border-radius: 4px;
 
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 12px;
+  }
 }
 
 .footer-form__icon {

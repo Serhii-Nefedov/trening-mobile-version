@@ -1,9 +1,14 @@
+
 .activity {
   padding-bottom: 94px;
+  
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .activity__list {
-  /*display: flex;
-  justify-content: space-between;*/
+  display: flex;
+  justify-content: space-between;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -33,4 +38,5 @@
 
   color: $title-button-white-color;
   background-color: $activity-subtitle-background-color;
+
 }

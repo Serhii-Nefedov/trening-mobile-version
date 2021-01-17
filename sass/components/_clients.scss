@@ -1,6 +1,10 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
@@ -19,28 +23,44 @@
   align-items: center;
 
   @extend %ul;
-  @extend %margin-padding-none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+ // @extend %margin-padding-none;
 
   @media screen and (min-width: 480px) {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
 .clients__card {
-  width: 210px;
+   width: 210px;
+  @media screen and (max-width: 479px) {
+   
   margin-bottom: 30px;
-  @media screen and (min-width: 480px) {
-  &:nth-child(5) {
-    margin: 0;
-  }
-}
   &:last-child {
     margin: 0;
   }
 }
+  @media screen and (min-width: 480px) {
+    margin: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+  }
+//  @media screen and (min-width: 480px) {
+//  &:nth-child(5) {
+//    margin: 0;
+ // }
+//}
+  
+
 
 .clients__link {
   @extend %display-flex-centre;
