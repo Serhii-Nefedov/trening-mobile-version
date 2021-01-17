@@ -1,6 +1,14 @@
 .portfolio-header {
-  position: relative;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 1199px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $backrgound-color;
+  z-index: 4;
+}
 }
 .site-nav__link--portfolio-active {
  position: relative;
@@ -22,13 +30,28 @@
     background: $accent-color;
 
     border-radius: 2px;
+    @media screen and (min-width: 768px) {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      transform: none;
+      }
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 32px;
   }
 }
 
 .projects {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  padding-bottom: 94px;
+  }
 }
+
 
 .filters {
   display: flex;
@@ -36,9 +59,15 @@
 
   margin-top: 0;
   margin-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
   padding: 0;
   
   @extend %ul;
+
 }
 
 .filters__item {
@@ -46,6 +75,12 @@
   margin-right: 8px;
   &:last-child {
     margin: 0 0 15px 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    &:last-child {
+    margin: 0;
+  }
   }
 }
 
@@ -84,6 +119,11 @@
   
   @extend %ul;
   @extend %margin-padding-none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .image {
   display: block;
@@ -93,7 +133,14 @@
 .galery__card {
   margin-bottom: 30px;
   width: 100%;
- 
+ @media screen and (min-width: 768px) {
+   margin: 15px;
+   width: 354px;
+ }
+
+ @media screen and (min-width: 1200px) {
+   width: 370px;
+ }
   
 
   @include transition(box-shadow);

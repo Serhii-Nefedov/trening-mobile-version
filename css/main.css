@@ -78,6 +78,7 @@ ul {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -111,6 +112,18 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 59px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    padding-top: 79px;
+  }
+}
+
 .logo {
   display: block;
   padding-top: 16px;
@@ -141,7 +154,17 @@ body {
 }
 
 .page-header {
-  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 1199px) {
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+  }
 }
 
 .site-nav {
@@ -337,7 +360,7 @@ body {
   .site-nav__link--active::after {
     left: 0;
     bottom: 0;
-    width: 48px;
+    width: 100%;
     height: 4px;
     -webkit-transform: none;
             transform: none;
@@ -709,12 +732,19 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 609px;
+  height: 796px;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 0;
+    height: 1024px;
+  }
 }
 
 .backdrop--is-hidden {
@@ -736,23 +766,32 @@ body {
   border-radius: 4px;
 }
 
-/*{
-  position: absolute;
-  left: 50%;
-  top: 50%;
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 460px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
-  width: 100%;
-  height: 609px;
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
 
-  background-color: $backrgound-color;
-
-  box-shadow: $box-shadow;
-
-  border-radius: 4px;
-
-  transform: translate(-50%, -50%) scale(1);
-  @include transition(transform);
-}*/
 .modal__close-button {
   margin-right: 8px;
   margin-left: auto;
@@ -790,6 +829,12 @@ body {
   line-height: 1.15;
   text-align: center;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .input-place .input-place__title {
+    line-height: 1.50;
+  }
 }
 
 .form__field {
@@ -928,6 +973,13 @@ textarea:focus {
   color: #757575;
 }
 
+@media screen and (min-width: 1200px) {
+  .checkbox__label-subtitle {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .checkbox__link {
   -webkit-text-decoration-color: #2196f3;
           text-decoration-color: #2196f3;
@@ -939,6 +991,13 @@ textarea:focus {
   font-size: 12px;
   line-height: 1.16;
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__link-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .submit-button {
@@ -1245,7 +1304,7 @@ text-decoration-color: $accent-color;
 @media screen and (max-width: 767px) {
   .features__box {
     margin-bottom: 30px;
-    min-width: 270px;
+    width: 100%;
   }
   .features__box:last-child {
     margin: 0;
@@ -1508,7 +1567,7 @@ text-decoration-color: $accent-color;
 @media screen and (max-width: 767px) {
   .team-card {
     margin-bottom: 30px;
-    width: 450px;
+    width: 100%;
   }
   .team-card:last-child {
     margin: 0;
@@ -2126,8 +2185,18 @@ width: 1200px;*/
 }
 
 .portfolio-header {
-  position: relative;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 1199px) {
+  .portfolio-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 4;
+  }
 }
 
 .site-nav__link--portfolio-active {
@@ -2150,9 +2219,33 @@ width: 1200px;*/
   border-radius: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav__link--portfolio-active::after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__link--portfolio-active {
+    padding-bottom: 32px;
+  }
+}
+
 .projects {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filters {
@@ -2166,6 +2259,17 @@ width: 1200px;*/
   padding: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .filters {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
 .filters__item {
   margin-bottom: 15px;
   margin-right: 8px;
@@ -2173,6 +2277,15 @@ width: 1200px;*/
 
 .filters__item:last-child {
   margin: 0 0 15px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .filters__item {
+    margin-bottom: 0;
+  }
+  .filters__item:last-child {
+    margin: 0;
+  }
 }
 
 .filters__button {
@@ -2201,6 +2314,17 @@ width: 1200px;*/
 }
 
 /*Galery*/
+@media screen and (min-width: 768px) {
+  .galery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .image {
   display: block;
   width: 100%;
@@ -2214,6 +2338,19 @@ width: 1200px;*/
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .galery__card {
+    margin: 15px;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .galery__card {
+    width: 370px;
+  }
 }
 
 .galery__card:hover, .galery__card:focus {

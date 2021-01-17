@@ -27,13 +27,19 @@
 }
 
 .features__box {
-  @media screen and (max-width: 767px) {
+  
+ @media screen and (max-width: 767px) {
   margin-bottom: 30px;
   &:last-child {
     margin: 0;
   }
-  min-width: 270px;
+  width: 100%;
 }
+//@media screen and (min-width: 480px) {
+ // width: 450px;
+//  height: 226px;
+ // margin: 0;
+//}
   @media screen and (min-width: 768px) {
     margin: 15px;
     width: 354px;
@@ -47,6 +53,7 @@
   &::before {
     display: block;
     content: '';
+    
     height: 120px;
     background-color: $team-background-color;
     border-radius: 4px;
