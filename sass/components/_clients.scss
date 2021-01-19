@@ -26,7 +26,6 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
- // @extend %margin-padding-none;
 
   @media screen and (min-width: 480px) {
     flex-direction: row;
@@ -36,14 +35,13 @@
 }
 
 .clients__card {
-   width: 210px;
+  width: 210px;
   @media screen and (max-width: 479px) {
-   
-  margin-bottom: 30px;
-  &:last-child {
-    margin: 0;
+    margin-bottom: 30px;
+    &:last-child {
+      margin: 0;
+    }
   }
-}
   @media screen and (min-width: 480px) {
     margin: 15px;
   }
@@ -53,13 +51,7 @@
   @media screen and (min-width: 1200px) {
     width: 170px;
   }
-  }
-//  @media screen and (min-width: 480px) {
-//  &:nth-child(5) {
-//    margin: 0;
- // }
-//}
-  
+}
 
 
 .clients__link {

@@ -210,6 +210,12 @@
 
         <ul class="features__list">
           <li class="features__box">
+            <div class="features__container">
+              <svg class="features__icon">
+              <use href="./images/adaptive-img/symbol-defs-features.svg#antenna"></use>
+            </svg>
+            </div>
+            
             <h3 class="features__title">Внимание к деталям</h3>
             <p class="features__subtitle">
               Идейные соображения, а также начало повседневной работы по
@@ -217,6 +223,11 @@
             </p>
           </li>
           <li class="features__box">
+            <div class="features__container">
+              <svg class="features__icon">
+                <use href="./images/adaptive-img/symbol-defs-features.svg#clock"></use>
+              </svg>
+            </div>
             <h3 class="features__title">Пунктуальность</h3>
             <p class="features__subtitle">
               Задача организации, в особенности же рамки и место обучения кадров
@@ -224,6 +235,11 @@
             </p>
           </li>
           <li class="features__box">
+            <div class="features__container">
+              <svg class="features__icon">
+                <use href="./images/adaptive-img/symbol-defs-features.svg#diagrama"></use>
+              </svg>
+            </div>
             <h3 class="features__title">Планирование</h3>
             <p class="features__subtitle">
               Равным образом консультация с широким активом в значительной
@@ -231,6 +247,11 @@
             </p>
           </li>
           <li class="features__box">
+            <div class="features__container">
+              <svg class="features__icon">
+                <use href="./images/adaptive-img/symbol-defs-features.svg#astronaut"></use>
+              </svg>
+            </div>
             <h3 class="features__title">Современные технологии</h3>
             <p class="features__subtitle">
               Значимость этих проблем настолько очевидна, что реализация
@@ -250,7 +271,12 @@
               <div class="activity__thumb">
                 <img
                   class="image"
-                  src="./images/img-box1-comp.jpg"
+                  srcset="
+                  ./images/adaptive-img/img-activity-1-370.jpg 1x,
+                  ./images/adaptive-img/img-activity-1-370@2x.jpg 2x,
+                  ./images/adaptive-img/img-activity-1-370@3x.jpg 3x
+                  "
+                  src="./images/adaptive-img/img-activity-1-370.jpg"
                   alt="десктопные приложения"
                   width="370"
                 />
@@ -261,7 +287,12 @@
               <div class="activity__thumb">
                 <img
                   class="image"
-                  src="./images/img-box2-comp.jpg"
+                  srcset="
+                  ./images/adaptive-img/img-activity-2-370.jpg 1x,
+                  ./images/adaptive-img/img-activity-2-370@2x.jpg 2x,
+                  ./images/adaptive-img/img-activity-2-370@3x.jpg 3x
+                  "
+                  src="./images/adaptive-img/img-activity-2-370.jpg"
                   alt="мобильные приложения"
                   width="370"
                 />
@@ -272,7 +303,12 @@
               <div class="activity__thumb">
                 <img
                   class="image"
-                  src="./images/img-box3-comp.jpg"
+                  srcset="
+                  ./images/adaptive-img/img-activity-3-370.jpg 1x,
+                  ./images/adaptive-img/img-activity-3-370@2x.jpg 2x,
+                  ./images/adaptive-img/img-activity-3-370@3x.jpg 3x
+                  "
+                  src="./images/adaptive-img/img-activity-3-370.jpg"
                   alt="дизайнерские решения"
                   width="370"
                 />
@@ -290,13 +326,39 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team-card">
-              <img
-                class="image"
-                src="./images/img-demyanenko-75.jpg"
-                alt="Игорь Демьяненко"
-                width=""
-                height=""
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/adaptive-img/img-team-1-450.jpg    1x,
+                    ./images/adaptive-img/img-team-1-450@2x.jpg 2x,
+                    ./images/adaptive-img/img-team-1-450@3x.jpg 3x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptive-img/img-team-1-270.jpg    1x,
+                    ./images/adaptive-img/img-team-1-270@2x.jpg 2x,
+                    ./images/adaptive-img/img-team-1-270@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptive-img/img-team-1-354.jpg    1x,
+                    ./images/adaptive-img/img-team-1-354@2x.jpg 2x,
+                    ./images/adaptive-img/img-team-1-354@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                
+                <img
+                  class="image"
+                  src="./images/adaptive-img/img-team-1-450.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                />
+              </picture>
               <div class="team-card__cocntent">
                 <h3 class="team-card__title">Игорь Демьяненко</h3>
                 <p class="team-card__subtitle">Product Designer</p>
@@ -354,13 +416,25 @@
             </li>
 
             <li class="team-card">
-              <img
-                class="image"
-                src="./images/img-repyna-75.jpg"
-                alt="Ольга Репина"
-                width=""
-                height=""
-              />
+              <picture>
+                <source srcset="
+                                  ./images/adaptive-img/img-team-2-450.jpg    1x,
+                                  ./images/adaptive-img/img-team-2-450@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-2-450@3x.jpg 3x
+                                " media="(max-width: 767px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-2-270.jpg    1x,
+                                  ./images/adaptive-img/img-team-2-270@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-2-270@3x.jpg 3x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-2-354.jpg    1x,
+                                  ./images/adaptive-img/img-team-2-354@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-2-354@3x.jpg 3x
+                                " media="(min-width: 768px)" />
+              
+                <img class="image" src="./images/adaptive-img/img-team-2-450.jpg" alt="Ольга Репина" width="450" />
+              </picture>
               <div class="team-card__cocntent">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__subtitle">Frontend Developer</p>
@@ -417,13 +491,25 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="image"
-                src="./images/img-tarasov-75.jpg"
-                alt="Николай Тарасов"
-                width=""
-                height=""
-              />
+              <picture>
+                <source srcset="
+                                  ./images/adaptive-img/img-team-3-450.jpg    1x,
+                                  ./images/adaptive-img/img-team-3-450@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-3-450@3x.jpg 3x
+                                " media="(max-width: 767px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-3-270.jpg    1x,
+                                  ./images/adaptive-img/img-team-3-270@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-3-270@3x.jpg 3x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-3-354.jpg    1x,
+                                  ./images/adaptive-img/img-team-3-354@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-3-354@3x.jpg 3x
+                                " media="(min-width: 768px)" />
+              
+                <img class="image" src="./images/adaptive-img/img-team-3-450.jpg" alt="Николай Тарасов" width="450" />
+              </picture>
               <div class="team-card__cocntent">
                 <h3 class="team-card__title">Николай Тарасов</h3>
                 <p class="team-card__subtitle">Marketing</p>
@@ -480,13 +566,25 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="image"
-                src="./images/img-ermacov-75.jpg"
-                alt="Михаил Ермаков"
-                width=""
-                height=""
-              />
+              <picture>
+                <source srcset="
+                                  ./images/adaptive-img/img-team-4-450.jpg    1x,
+                                  ./images/adaptive-img/img-team-4-450@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-4-450@3x.jpg 3x
+                                " media="(max-width: 767px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-4-270.jpg    1x,
+                                  ./images/adaptive-img/img-team-4-270@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-4-270@3x.jpg 3x
+                                " media="(min-width: 1200px)" />
+                <source srcset="
+                                  ./images/adaptive-img/img-team-4-354.jpg    1x,
+                                  ./images/adaptive-img/img-team-4-354@2x.jpg 2x,
+                                  ./images/adaptive-img/img-team-4-354@3x.jpg 3x
+                                " media="(min-width: 768px)" />
+              
+                <img class="image" src="./images/adaptive-img/img-team-4-450.jpg" alt="Михаил Ермаков" width="450" />
+              </picture>
               <div class="team-card__cocntent">
                 <h3 class="team-card__title">Михаил Ермаков</h3>
                 <p class="team-card__subtitle">UI Designer</p>

@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 5;
 
- padding: 93px 15px;
+  padding: 93px 15px;
   top: 0;
   left: 0;
   width: 100%;
@@ -31,35 +31,32 @@
 
 .modal {
   padding-top: 8px;
- background-color: $backrgound-color; 
+  background-color: $backrgound-color;
   box-shadow: $box-shadow;
 
   border-radius: 4px;
 
   @media screen and (min-width: 480px) {
     position: absolute;
-  left: 50%;
-  top: 50%;
+    left: 50%;
+    top: 50%;
 
-  width: 460px;
+    width: 460px;
 
-  background-color: $backrgound-color;
+    background-color: $backrgound-color;
 
-  box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
 
-  border-radius: 4px;
+    border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
-  @include transition(transform);
-    
+    transform: translate(-50%, -50%) scale(1);
+    @include transition(transform);
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
     height: 581px;
   }
 }
-
-
 
 .modal__close-button {
   @extend %display-flex-centre;
@@ -101,7 +98,7 @@
     font-size: 20px;
     line-height: 1.15;
     @media screen and (min-width: 1200px) {
-      line-height: 1.50;
+      line-height: 1.5;
     }
     text-align: center;
 
@@ -156,8 +153,6 @@
   fill: #212121;
 
   @include transition(fill);
-
-  
 }
 textarea {
   padding: 12px 16px;
@@ -182,7 +177,7 @@ textarea {
 }
 
 .checkbox {
- @extend %display-flex-centre;
+  @extend %display-flex-centre;
 
   margin-top: 20px;
   margin-left: auto;
@@ -214,30 +209,29 @@ textarea {
   border-radius: 4px;
 }
 
-
 .checkbox__label-subtitle {
   display: block;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
-@media screen and (min-width: 1200px) {
-  font-size: 14px;
-  line-height: 1.71;
-}
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   color: $subtitle-color;
 }
 .checkbox__link {
-text-decoration-color: $accent-color;
+  text-decoration-color: $accent-color;
 }
 .checkbox__link-text {
   display: block;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
-@media screen and (min-width: 1200px) {
-  font-size: 14px;
-  line-height: 1.71;
-}
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   color: $accent-color;
 }
 .submit-button {
@@ -274,244 +268,4 @@ text-decoration-color: $accent-color;
   color: $title-button-white-color;
 }
 
-/*.backdrop {
-  position: fixed;
-  z-index: 5;
 
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 1024px;
-
-  background: $backdrop-background;
-
-  opacity: 1;
-  @include transition(opacity);
-}
-.backdrop--is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  & .modal {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-}
-
-.modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-
-  width: 528px;
-  height: 581px;
-
-  background-color: $backrgound-color;
-
-  box-shadow: $box-shadow;
-
-  border-radius: 4px;
-
-  transform: translate(-50%, -50%) scale(1);
-  @include transition(transform);
-}
-
-.modal__close-button {
-  @extend %display-flex-centre;
-
-  margin-top: 8px;
-  margin-right: 8px;
-  margin-left: auto;
-  padding: 0;
-
-  width: 30px;
-  height: 30px;
-
-  color: $logo-black-color;
-  background-color: $backrgound-color;
-
-  @include bordered(rgba(0, 0, 0, 0.1));
-  border-radius: 50%;
-
-  @include transition(color);
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-  cursor: pointer;
-}
-.modal__close-icon {
-  display: block;
-  width: 11px;
-  height: 11px;
-
-  fill: currentColor;
-}
-.input-place {
-  padding: 2px 40px 40px 40px;
-
-  .input-place__title {
-    display: block;
-
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-
-    color: $title-color;
-  }
-}
-.form__field {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.form__label {
-  padding-bottom: 4px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: $subtitle-color;
-}
-
-.form__input {
-  padding: 0;
-  height: 40px;
-  padding: 12px 42px;
-
-  @include bordered(rgba(33, 33, 33, 0.2));
-  border-radius: 4px;
-
-  @include transition(border-color);
-  &:focus {
-    border-color: $accent-color;
-  }
-  &:focus + .input__picture .input__icon {
-    fill: $accent-color;
-  }
-}
-.input__icon {
-  position: absolute;
-  display: inline-block;
-  bottom: 13px;
-  left: 14px;
-
-  width: 12px;
-  height: 12px;
-  fill: #212121;
-
-  @include transition(fill);
-
-  
-}
-textarea {
-  padding: 12px 16px;
-  height: 120px;
-  @include bordered(rgba(33, 33, 33, 0.2));
-  border-radius: 4px;
-
-  @include transition(border-color);
-
-  &::placeholder {
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-
-    color: $textarea-placeholder-color;
-  }
-
-  &:focus {
-    border-color: $accent-color;
-  }
-}
-
-.checkbox__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  &:checked + .checkbox__decoration {
-    border-color: $accent-color;
-    background-color: $accent-color;
-    background-image: url(../images/icon/icon-check-auto.svg);
-    background-size: contain;
-    background-origin: border-box;
-  }
-}
-
-.checkbox__decoration {
-  display: inline-block;
-  margin-right: 7px;
-
-  width: 16px;
-  height: 15px;
-  border: 2px solid $title-color;
-  border-radius: 4px;
-}
-
-.checkbox {
-  @extend %display-flex-centre;
-
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.checkbox__label-subtitle {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-
-  color: var(--accent-color);
-}
-.checkbox__link {
-text-decoration-color: $accent-color;
-}
-.checkbox__link-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-
-  color: $accent-color;
-}
-.submit-button {
-  @extend %display-flex-centre;
-
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-
-  min-width: 200px;
-  height: 50px;
-
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  background-color: $accent-color;
-
-  box-shadow: $submit-button-box-shadow;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.submit-button__title {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  color: $title-button-white-color;
-}*/
